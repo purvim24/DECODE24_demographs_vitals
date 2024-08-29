@@ -1,12 +1,15 @@
 required_packages <- c("shiny", "ggplot2", "dplyr", "plotly", "readxl", "shinythemes", "ggthemes")
 
-install_if_missing <- function(p) {
-  if (!requireNamespace(p, quietly = TRUE)) {
-    install.packages(p)
+install_if_missing <- function(packages) {
+  for (pkg in packages) {
+    if (!require(pkg, character.only = TRUE)) {
+      install.packages(pkg, dependencies = TRUE)
+    }
   }
 }
 
-invisible(lapply(required_packages, install_if_missing))
+install_if_missing(required_packages)
+
 
 #install.packages("shiny")
 #install.packages("ggplot2")
