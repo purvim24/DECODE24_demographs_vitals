@@ -8,7 +8,7 @@ install.packages("shinythemes")
 install.packages("ggthemes")
 
 library(shiny)
-library(ggplot)
+#library(ggplot)
 library(ggplot2)
 library(dplyr)
 library(plotly)
