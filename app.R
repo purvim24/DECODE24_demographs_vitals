@@ -6,6 +6,10 @@ install.packages("plotly")
 install.packages("readxl")
 install.packages("shinythemes")
 install.packages("ggthemes")
+install.packages("htmlwidgets")
+install.packages("jsonlite")
+install.packages("crosstalk")
+
 #install.packages("tidyverse")
 
 # Load required packages
