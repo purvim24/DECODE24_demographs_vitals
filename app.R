@@ -1,18 +1,11 @@
-# List of required packages
-required_packages <- c("shiny", "ggplot2", "dplyr", "plotly", "readxl", "shinythemes", "ggthemes")
-
-# Function to install missing packages
-install_if_missing <- function(packages) {
-  for (pkg in packages) {
-    if (!require(pkg, character.only = TRUE)) {
-      install.packages(pkg, dependencies = TRUE)
-      library(pkg, character.only = TRUE)  # Load the package after installation
-    }
-  }
-}
-
-# Install and load required packages
-install_if_missing(required_packages)
+#Installing the packages
+install.packages("shiny", dependencies = TRUE)
+install.packages("ggplot2", dependencies = TRUE)
+install.packages("dplyr", dependencies = TRUE)
+install.packages("plotly", dependencies = TRUE)
+install.packages("readxl", dependencies = TRUE)
+install.packages("shinythemes", dependencies = TRUE)
+install.packages("ggthemes", dependencies = TRUE)
 
 # Load required packages
 library(shiny)
