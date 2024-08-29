@@ -1,4 +1,3 @@
-install.packages("ggplot")
 install.packages("shiny")
 install.packages("ggplot2")
 install.packages("dplyr")
@@ -8,7 +7,6 @@ install.packages("shinythemes")
 install.packages("ggthemes")
 
 library(shiny)
-#library(ggplot)
 library(ggplot2)
 library(dplyr)
 library(plotly)
