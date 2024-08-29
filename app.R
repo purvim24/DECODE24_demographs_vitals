@@ -1,10 +1,20 @@
-install.packages("shiny")
-install.packages("ggplot2")
-install.packages("dplyr")
-install.packages("plotly")
-install.packages("readxl")
-install.packages("shinythemes")
-install.packages("ggthemes")
+required_packages <- c("shiny", "ggplot2", "dplyr", "plotly", "readxl", "shinythemes", "ggthemes")
+
+install_if_missing <- function(p) {
+  if (!requireNamespace(p, quietly = TRUE)) {
+    install.packages(p)
+  }
+}
+
+invisible(lapply(required_packages, install_if_missing))
+
+#install.packages("shiny")
+#install.packages("ggplot2")
+#install.packages("dplyr")
+#install.packages("plotly")
+#install.packages("readxl")
+#install.packages("shinythemes")
+#install.packages("ggthemes")
 
 library(shiny)
 library(ggplot2)
